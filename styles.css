@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  line-height: 1.4;
+  --bg: #f3f5fb;
+  --card: #fff;
+  --ink: #1e1f24;
+  --muted: #5d6372;
+  --brand: #5f46ff;
+  --accent: #e7f4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.hero {
+  background: linear-gradient(140deg, #1f2255, #5f46ff 60%, #7d95ff);
+  color: #fff;
+  padding: 1rem 2rem 3rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-copy {
+  max-width: 720px;
+  margin-top: 3rem;
+}
+
+.button,
+button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1100px;
+  margin: -1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 20px rgba(20, 20, 43, 0.06);
+}
+
+.accent {
+  background: var(--accent);
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  border: 1px solid #c9cedd;
+  border-radius: 8px;
+  padding: 0.55rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ebedf3;
+  padding: 0.55rem;
+  text-align: left;
+}
+
+.output {
+  background: #121523;
+  color: #d2daf9;
+  border-radius: 10px;
+  min-height: 90px;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  white-space: pre-wrap;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  margin: 2rem 0;
+}
