@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TravelByTime Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav>
+        <strong>TravelByTime</strong>
+        <ul>
+          <li><a href="#b2b">B2B</a></li>
+          <li><a href="#armenia">Link to Armenia</a></li>
+          <li><a href="#affiliates">Affiliates</a></li>
+          <li><a href="#tour-builder">AI Tour Builder</a></li>
+          <li><a href="#bookings">Bookings</a></li>
+        </ul>
+      </nav>
+      <section class="hero-copy">
+        <h1>Build, promote, and operate destination experiences with AI.</h1>
+        <p>
+          A full starter system for B2B partners, ambassadors, affiliates, and booking operations — with a dedicated
+          Link to Armenia destination activation track.
+        </p>
+        <a class="button" href="#tour-builder">Start creating tours</a>
+      </section>
+    </header>
+
+    <main>
+      <section id="b2b" class="card">
+        <h2>B2B Partner Pipeline</h2>
+        <p>Capture and manage destination partners, DMCs, and local operators.</p>
+        <form id="partner-form" class="grid-form">
+          <label>
+            Company
+            <input name="company" required />
+          </label>
+          <label>
+            Contact Person
+            <input name="contact" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" required />
+          </label>
+          <label>
+            Destination Focus
+            <input name="destination" placeholder="e.g., Armenia, Georgia" required />
+          </label>
+          <label>
+            Supply Type
+            <select name="supplyType" required>
+              <option value="">Select</option>
+              <option>Day tours</option>
+              <option>Multi-day packages</option>
+              <option>Custom luxury</option>
+              <option>Adventure</option>
+            </select>
+          </label>
+          <button type="submit">Add B2B Partner</button>
+        </form>
+        <table>
+          <thead>
+            <tr><th>Company</th><th>Contact</th><th>Email</th><th>Destination</th><th>Supply</th></tr>
+          </thead>
+          <tbody id="partners-body"></tbody>
+        </table>
+      </section>
+
+      <section id="armenia" class="card accent">
+        <h2>Link to Armenia Program</h2>
+        <p>
+          Launch a destination-specific growth track for Armenia: curated products, diaspora campaigns,
+          and partner enablement.
+        </p>
+        <ul>
+          <li>Armenia onboarding checklist with legal/commercial setup.</li>
+          <li>Dedicated ambassador cohort for Armenian routes and storytelling.</li>
+          <li>Affiliate landing pages for campaign-based acquisition.</li>
+        </ul>
+      </section>
+
+      <section id="affiliates" class="card">
+        <h2>Ambassador & Affiliate Engine</h2>
+        <form id="affiliate-form" class="grid-form">
+          <label>
+            Name
+            <input name="name" required />
+          </label>
+          <label>
+            Role
+            <select name="role" required>
+              <option value="">Select</option>
+              <option>Ambassador</option>
+              <option>Affiliate</option>
+            </select>
+          </label>
+          <label>
+            Audience / Niche
+            <input name="niche" placeholder="Adventure, luxury, diaspora..." required />
+          </label>
+          <label>
+            Channel
+            <select name="channel" required>
+              <option value="">Select</option>
+              <option>Instagram</option>
+              <option>YouTube</option>
+              <option>Newsletter</option>
+              <option>Blog</option>
+              <option>Community</option>
+            </select>
+          </label>
+          <button type="submit">Add profile</button>
+        </form>
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Role</th><th>Niche</th><th>Channel</th><th>Referral Code</th></tr>
+          </thead>
+          <tbody id="affiliates-body"></tbody>
+        </table>
+      </section>
+
+      <section id="tour-builder" class="card">
+        <h2>AI Tour Builder</h2>
+        <p>Generate draft itineraries in one click and publish as sellable tours.</p>
+        <form id="ai-form" class="grid-form">
+          <label>
+            Destination
+            <input name="destination" value="Armenia" required />
+          </label>
+          <label>
+            Duration (days)
+            <input name="days" type="number" min="1" max="30" value="5" required />
+          </label>
+          <label>
+            Travel Style
+            <select name="style" required>
+              <option>Cultural</option>
+              <option>Adventure</option>
+              <option>Luxury</option>
+              <option>Family</option>
+            </select>
+          </label>
+          <label>
+            Budget Level
+            <select name="budget" required>
+              <option>Affordable</option>
+              <option>Mid-range</option>
+              <option>Premium</option>
+            </select>
+          </label>
+          <button type="submit">Generate tour draft</button>
+        </form>
+        <article id="ai-output" class="output">No draft yet.</article>
+        <button id="publish-tour" type="button" disabled>Publish to inventory</button>
+      </section>
+
+      <section id="bookings" class="card">
+        <h2>Tour Inventory & Booking Operations</h2>
+        <div class="split">
+          <div>
+            <h3>Published Tours</h3>
+            <ul id="tour-list" class="list"></ul>
+          </div>
+          <div>
+            <h3>Create Booking</h3>
+            <form id="booking-form" class="grid-form">
+              <label>
+                Traveler Name
+                <input name="traveler" required />
+              </label>
+              <label>
+                Tour
+                <select id="tour-select" name="tour" required></select>
+              </label>
+              <label>
+                Travelers Count
+                <input name="pax" type="number" min="1" value="2" required />
+              </label>
+              <label>
+                Status
+                <select name="status">
+                  <option>Pending</option>
+                  <option>Confirmed</option>
+                </select>
+              </label>
+              <button type="submit">Add Booking</button>
+            </form>
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr><th>Traveler</th><th>Tour</th><th>PAX</th><th>Status</th></tr>
+          </thead>
+          <tbody id="bookings-body"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>TravelByTime MVP starter — ready for backend/API integration.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
